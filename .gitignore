@@ -1,0 +1,5 @@
+config/database.php
+config/bootstrap.local.php
+tmp/**/*
+webroot/files/*
+.DS_Store
