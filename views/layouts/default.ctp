@@ -17,9 +17,11 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__('MissionControl: A CakePHP CMS', true), 'http://github.com/jamiemill/missioncontrol'); ?></h1>
+			<h1><?php echo $this->Html->link(Configure::read('Site.title'), '/'); ?></h1>
 		</div>
 		<div id="content">
+
+			<?php echo $this->element('menu',array('plugin'=>'core','baseListId'=>'nav','pagePath'=>@$pagePath,'initialDepth'=>1,'depthLimit'=>0)) ?>
 
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->Session->flash('auth'); ?>
@@ -28,6 +30,7 @@
 
 		</div>
 		<div id="footer">
+			<?php echo $this->Html->link(__('MissionControl: A CakePHP CMS', true), 'http://github.com/jamiemill/missioncontrol'); ?>
 		</div>
 	</div>
 </body>

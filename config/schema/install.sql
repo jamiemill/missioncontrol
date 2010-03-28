@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Mar 28, 2010 at 12:34 PM
+-- Generation Time: Mar 28, 2010 at 03:41 PM
 -- Server version: 5.0.41
 -- PHP Version: 5.2.5
 
@@ -238,14 +238,16 @@ CREATE TABLE `core_blocks` (
   `deleted` int(1) default '0',
   `deleted_date` datetime default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- 
 -- Dumping data for table `core_blocks`
 -- 
 
 INSERT INTO `core_blocks` (`id`, `content_area`, `content`, `core_page_id`, `core_block_type_id`, `revision_count`, `created`, `modified`, `deleted`, `deleted_date`) VALUES 
-(1, 'main_content', '<p>here''s some dynamic content!</p>', 1, NULL, 0, '2010-03-28 10:34:12', '2010-03-28 10:34:12', 0, NULL);
+(1, 'main_content', '<p>here''s some dynamic content!</p>', 1, NULL, 0, '2010-03-28 10:34:12', '2010-03-28 10:34:12', 0, NULL),
+(2, 'main_content', '<p>You made it here. Well done.</p>', 2, NULL, 0, '2010-03-28 15:37:46', '2010-03-28 15:37:46', 0, NULL),
+(3, 'sidebar', '<p>Some text for the sidebar.</p>', 2, NULL, 0, '2010-03-28 15:39:46', '2010-03-28 15:39:46', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -269,14 +271,16 @@ CREATE TABLE `core_blocks_revs` (
   `deleted` int(1) default '0',
   `deleted_date` datetime default NULL,
   PRIMARY KEY  (`version_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- 
 -- Dumping data for table `core_blocks_revs`
 -- 
 
 INSERT INTO `core_blocks_revs` (`id`, `version_id`, `version_created`, `title`, `slug`, `content_area`, `content`, `core_page_id`, `core_block_type_id`, `created`, `modified`, `deleted`, `deleted_date`) VALUES 
-(1, 1, '2010-03-28 10:34:12', NULL, NULL, 'main_content', '<p>here''s some dynamic content!</p>', 1, NULL, '2010-03-28 10:34:12', '2010-03-28 10:34:12', 0, NULL);
+(1, 1, '2010-03-28 10:34:12', NULL, NULL, 'main_content', '<p>here''s some dynamic content!</p>', 1, NULL, '2010-03-28 10:34:12', '2010-03-28 10:34:12', 0, NULL),
+(2, 2, '2010-03-28 15:37:46', NULL, NULL, 'main_content', '<p>You made it here. Well done.</p>', 2, NULL, '2010-03-28 15:37:46', '2010-03-28 15:37:46', 0, NULL),
+(3, 3, '2010-03-28 15:39:46', NULL, NULL, 'sidebar', '<p>Some text for the sidebar.</p>', 2, NULL, '2010-03-28 15:39:46', '2010-03-28 15:39:46', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -352,14 +356,15 @@ CREATE TABLE `core_pages` (
   `deleted_date` datetime default NULL,
   `redirect_to_first_child` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- 
 -- Dumping data for table `core_pages`
 -- 
 
 INSERT INTO `core_pages` (`id`, `title`, `title_long`, `slug`, `view_file`, `layout_file`, `publish_time`, `unpublish_time`, `meta_description`, `meta_keywords`, `parent_id`, `lft`, `rght`, `is_protected`, `show_in_menu`, `created`, `modified`, `is_published`, `deleted`, `deleted_date`, `redirect_to_first_child`) VALUES 
-(1, 'Home', NULL, 'home', 'home', 'default', '2010-03-27 23:32:58', NULL, NULL, NULL, NULL, 1, 2, 0, 1, NULL, NULL, 1, 0, NULL, 0);
+(1, 'Home', NULL, 'home', 'home', 'default', '2010-03-27 23:32:58', NULL, NULL, NULL, NULL, 1, 2, 0, 1, NULL, NULL, 1, 0, NULL, 0),
+(2, 'Second page', '', 'second-page', 'default', 'default', '2010-03-28 15:37:00', NULL, '', '', NULL, 3, 4, 0, 1, '2010-03-28 15:37:31', '2010-03-28 15:37:31', 1, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -558,7 +563,7 @@ CREATE TABLE `users` (
   `enabled` tinyint(1) NOT NULL default '1',
   `activation_sent` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 -- 
 -- Dumping data for table `users`
