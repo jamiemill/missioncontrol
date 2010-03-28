@@ -3,3 +3,4 @@ config/bootstrap.local.php
 tmp/**/*
 webroot/files/*
 .DS_Store
+webroot/js/tiny_mce

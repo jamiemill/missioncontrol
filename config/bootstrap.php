@@ -48,4 +48,53 @@
  * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
  *
  */
+
+
+/**
+ * MissionControl Configuration
+ * 
+ * Note that the bootstrap.core.php file does some configuration that all MissionControl sites need,
+ * including defining an extra path to search for 'plugins' like so:
+ * App::build(array(
+ * 	'plugins' => array(APP . 'missioncontrol_plugins' . DS)
+ * ));
+ * 
+ * This might override your use of App::build above so please check and ensure the two coexist nicely.
+ *
+ */
+
+require_once(APP.'missioncontrol_plugins'.DS.'core'.DS.'config'.DS.'bootstrap.core.php');
+
+Configure::write('Site.title', 'MissionControl Demo Site');
+Configure::write('Site.emailsTo','info@example.com');
+Configure::write('Site.allowPageParentContent', null); 									
+Configure::write('Site.extraThumbnailSizes', array(
+	'thumbnail'=>array(200,200,1,'C'),
+	'homepage'=>array(450,450,1,'C')
+));
+
+Configure::write('Robot.fromAddress', 'Missioncontrol Demo Site <info@example.com>');
+Configure::write('Robot.SMTP.port',null);
+Configure::write('Robot.SMTP.type',null);
+Configure::write('Robot.SMTP.host','xxx.xxx.xxx');
+Configure::write('Robot.SMTP.username','xxx@xxx.xxx');
+Configure::write('Robot.SMTP.password','xxx');
+Configure::write('SwiftEmail.debug',true);
+
+Configure::write('User.Register.redirect',false);
+Configure::write('User.Login.fallbackRedirect','/admin/');
+Configure::write('User.SiteHasFrontendLogin',false);
+
+
+/**
+* Pick one of these three constants to define what happens when a user registers at the site:
+* 
+* 'USER_REGISTER_ACTIVATION_IMMEDIATE'
+* 'USER_REGISTER_ACTIVATION_SELF_ACTIVATE'
+* 'USER_REGISTER_ACTIVATION_ADMIN_NOTIFY'
+*/
+
+Configure::write('User.Register.activation',USER_REGISTER_ACTIVATION_ADMIN_NOTIFY);
+
+
 ?>
