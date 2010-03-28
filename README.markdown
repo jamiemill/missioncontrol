@@ -2,7 +2,7 @@
 
 MissionControl is a simple CMS built on the [CakePHP](http://cakephp.org) framework version 1.3.
 
-This work-in-progress CMS has evolved gradually and somewhat inconsistently out of many of my projects from the last couple of years, and until now was never packaged up as a whole. It is not production-ready in this form and hasn't undergone much testing, so please be wary! It's intended for people with an good knowledge of CakePHP and will not make a lot of sense to others yet.
+This work-in-progress CMS has evolved gradually and somewhat inconsistently out of many of my projects from the last couple of years, and until now was never packaged up as a whole. It is not production-ready in this form and hasn't undergone much testing, so please be wary! It's intended for developers with a good knowledge of CakePHP and will not make a lot of sense to others yet.
 
 There is a more elegant, wordpressy CakePHP CMS called [Croogo](http://www.croogo.org/) which looks better in many ways than this, so you might want to look there instead...
 
@@ -47,16 +47,16 @@ There is no automatic installer yet I'm afraid. Instead, please follow these ste
 
 3. Pull in the necessary submodules:
 	
-	`git submodule init && git submodule update`
+	`cd your_new_site_directory && git submodule init && git submodule update`
 
 	This will initialise the following submodules:
 	
-	- `missioncontrol_plugins/core         [git://github.com/jamiemill/missioncontrol_core.git]`
-	- `missioncontrol_plugins/users        [git://github.com/jamiemill/missioncontrol_users.git]`
-	- `missioncontrol_plugins/file_library [git://github.com/jamiemill/missioncontrol_file_library.git]`
-	- `missioncontrol_plugins/news         [git://github.com/jamiemill/missioncontrol_news.git]`
-	- `plugins/acl_extras                  [git://github.com/markstory/acl_extras.git]`
-	- `plugins/debug_kit                   [git://github.com/cakephp/debug_kit.git]`
+		missioncontrol_plugins/core         [git://github.com/jamiemill/missioncontrol_core.git]
+		missioncontrol_plugins/users        [git://github.com/jamiemill/missioncontrol_users.git]
+		missioncontrol_plugins/file_library [git://github.com/jamiemill/missioncontrol_file_library.git]
+		missioncontrol_plugins/news         [git://github.com/jamiemill/missioncontrol_news.git]
+		plugins/acl_extras                  [git://github.com/markstory/acl_extras.git]
+		plugins/debug_kit                   [git://github.com/cakephp/debug_kit.git]
 	
 4. Fetch a copy of the [TinyMCE jQuery package](http://tinymce.moxiecode.com/download.php) and drop the `tiny_mce` subfolder inside `webroot/js/`
 
