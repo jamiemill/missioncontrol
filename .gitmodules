@@ -4,3 +4,15 @@
 [submodule "plugins/debug_kit"]
 	path = plugins/debug_kit
 	url = git://github.com/cakephp/debug_kit.git
+[submodule "plugins/core"]
+	path = plugins/core
+	url = git://github.com/jamiemill/missioncontrol_core.git
+[submodule "plugins/file_library"]
+	path = plugins/file_library
+	url = git://github.com/jamiemill/missioncontrol_file_library.git
+[submodule "plugins/users"]
+	path = plugins/users
+	url = git://github.com/jamiemill/missioncontrol_users.git
+[submodule "plugins/news"]
+	path = plugins/news
+	url = git://github.com/jamiemill/missioncontrol_news.git

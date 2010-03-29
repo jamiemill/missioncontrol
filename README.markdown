@@ -51,12 +51,12 @@ There is no automatic installer yet I'm afraid. Instead, please follow these ste
 
 	This will initialise the following submodules:
 	
-		missioncontrol_plugins/core         [git://github.com/jamiemill/missioncontrol_core.git]
-		missioncontrol_plugins/users        [git://github.com/jamiemill/missioncontrol_users.git]
-		missioncontrol_plugins/file_library [git://github.com/jamiemill/missioncontrol_file_library.git]
-		missioncontrol_plugins/news         [git://github.com/jamiemill/missioncontrol_news.git]
-		plugins/acl_extras                  [git://github.com/markstory/acl_extras.git]
-		plugins/debug_kit                   [git://github.com/cakephp/debug_kit.git]
+		plugins/core         [git://github.com/jamiemill/missioncontrol_core.git]
+		plugins/users        [git://github.com/jamiemill/missioncontrol_users.git]
+		plugins/file_library [git://github.com/jamiemill/missioncontrol_file_library.git]
+		plugins/news         [git://github.com/jamiemill/missioncontrol_news.git]
+		plugins/acl_extras   [git://github.com/markstory/acl_extras.git]
+		plugins/debug_kit    [git://github.com/cakephp/debug_kit.git]
 	
 4. Fetch a copy of the [TinyMCE jQuery package](http://tinymce.moxiecode.com/download.php) and drop the `tiny_mce` subfolder inside `webroot/js/`
 
@@ -87,13 +87,13 @@ There is no automatic installer yet I'm afraid. Instead, please follow these ste
 
 ## Directory Structure
 
-All of MissionControl's functionality is packaged as a suite of CakePHP "plugins", stored in `missioncontrol_plugins`, which is the only non-cake-standard directory. This directory mirrors the standard `plugins` directory. When looking for files, cake will look first in the standard `plugins` directory and fall back to the `missioncontrol_plugins` directory, where we expect most things to be.
+All of MissionControl's functionality is packaged as a suite of CakePHP "plugins", stored in the usual `plugins` directory.
 
-This allows us to override certain MissionControl functionality on a site-by-site basis by duplicating a file to a mirrored path inside `plugins` and editing it. This should be used sparingly though – it's better to try and improve the configurability of the plugins than duplicate and change. However, it is useful sometimes for overriding some core view files with site-specific markup (e.g. to customise the views of the `news` plugin).
+Plugin view files can be overidden on a site-by-site basis by duplicating a file into `{APP}/views/plugins/{plugin_name}/`.
 
 Any site-specific logic would usually be manifested in the creation of new models/views/controllers outside the plugin directories in the usual CakePHP way.
 
-Administrative pages are found via the `/admin/` route prefix. This does not correspond to a directory - instead controller methods that perform administrative functions are prefixed with `admin_` in the CakePHP way.
+Administrative pages are found via the `/admin/` route prefix. This does not correspond to a directory, it's a special routing set up in the configuration of this site.
 
 
 ## Bootstrap

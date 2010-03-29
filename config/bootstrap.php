@@ -56,14 +56,14 @@
  * Note that the bootstrap.core.php file does some configuration that all MissionControl sites need,
  * including defining an extra path to search for 'plugins' like so:
  * App::build(array(
- * 	'plugins' => array(APP . 'missioncontrol_plugins' . DS)
+ * 	'plugins' => array(APP . 'plugins' . DS)
  * ));
  * 
  * This might override your use of App::build above so please check and ensure the two coexist nicely.
  *
  */
 
-require_once(APP.'missioncontrol_plugins'.DS.'core'.DS.'config'.DS.'bootstrap.core.php');
+require_once(APP.'plugins'.DS.'core'.DS.'config'.DS.'bootstrap.core.php');
 
 Configure::write('Site.title', 'MissionControl Demo Site');
 Configure::write('Site.emailsTo','info@example.com');

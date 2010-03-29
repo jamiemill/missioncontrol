@@ -34,6 +34,6 @@
 	
 
 	Router::connect('/', array('plugin'=>'core', 'controller' => 'core_pages', 'action' => 'view', 'home'));
-	require_once(APP.'missioncontrol_plugins'.DS.'core'.DS.'config'.DS.'plugin_routes.php');
+	require_once(APP.'plugins'.DS.'core'.DS.'config'.DS.'plugin_routes.php');
 	
 ?>
