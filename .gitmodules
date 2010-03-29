@@ -1,15 +1,3 @@
-[submodule "missioncontrol_plugins/core"]
-	path = missioncontrol_plugins/core
-	url = git://github.com/jamiemill/missioncontrol_core.git
-[submodule "missioncontrol_plugins/users"]
-	path = missioncontrol_plugins/users
-	url = git://github.com/jamiemill/missioncontrol_users.git
-[submodule "missioncontrol_plugins/file_library"]
-	path = missioncontrol_plugins/file_library
-	url = git://github.com/jamiemill/missioncontrol_file_library.git
-[submodule "missioncontrol_plugins/news"]
-	path = missioncontrol_plugins/news
-	url = git://github.com/jamiemill/missioncontrol_news.git
 [submodule "plugins/acl_extras"]
 	path = plugins/acl_extras
 	url = git://github.com/markstory/acl_extras.git
